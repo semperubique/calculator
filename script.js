@@ -12,6 +12,7 @@ function multiply(num1,num2) {
 
 function divide(num1,num2) {
 	if(num2 === 0) { alert("Cannot divide by 0"); clearDisplay(); return 0;}
+	console.log((num1/num2).toFixed(3));
 	return (num1/num2).toFixed(3);
 }
 
@@ -113,6 +114,7 @@ equalButton.addEventListener('click', () => {
 		num2 = temporaryNum;
 		result = operate(chosenOperatorName,num1,num2);	
 	}
+	clearDisplay();
 	temporaryNum = result.toString();
 	display.textContent = result;
 })
